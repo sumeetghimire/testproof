@@ -1,0 +1,25 @@
+name: PRoof
+on: [pull_request]
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: sumeetghimire/proof@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          run_tests: true
+          check_issue: true
+          detect_hallucinations: true
+          security_scan: true
+          check_dependencies: true
+          check_imports: true
+          check_scope: true
+          check_sensitive_files: true
+          block_merge: false
