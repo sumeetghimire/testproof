@@ -11,7 +11,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - uses: sumeetghimire/proof@1.0
+      - uses: sumeetghimire/proof@1.0.1
         id: proof
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
