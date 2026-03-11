@@ -2,6 +2,7 @@
 
 Minimal Python repo to test [PRoof](https://github.com/sumeetghimire/proof) verification on pull requests.
 
+
 ## Run tests
 
 ```bash
